@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+:root {
+    --accent-colour: #0AF;
+
+    --dark-theme-bg: #333;
+    --dark-theme-colour: #FFF;
+    --dark-theme-border: solid .5rem #333;
+    --dark-theme-dark-shadow: rgb(0, 0, 0, .3);
+    --dark-theme-light-shadow: rgb(100, 100, 100, .25);
+
+    --light-theme-bg: #FFF;
+    --light-theme-colour: #333;
+    --light-theme-border: solid .5rem #EEE;
+    --light-theme-dark-shadow: rgb(100, 100, 100, .075);
+    --light-theme-light-shadow: rgb(255, 255, 255, .6);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: var(--dark-theme-bg);
+    color: var(--dark-theme-colour);
+
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    letter-spacing: .1em;
+
+    overflow: hidden;
+}
+
+input[type="checkbox"]#checkbox {
+    position: relative;
+    width: 2rem;
+    height: 1rem;
+}
+
+input[type="checkbox"]#checkbox:hover,
+label[for="checkbox"]:hover {
+    cursor: pointer;
+}
+
+input[type="checkbox"]#checkbox::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background-color: #EEE;
+    border-radius: 9999px;
+}
+
+input[type="checkbox"]#checkbox:hover::before {
+    background-color: #BBB;
+}
+
+input[type="checkbox"]#checkbox::after {
+    content: '\2715';
+    position: absolute;
+    top: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: .05em;
+    width: 45%;
+    aspect-ratio: 1 / 1;
+
+    background-color: #333;
+    color: #FFF;
+    border-radius: 9999px;
+
+    font-size: .4rem;
+    transform: translateY(-50%);
+}
+
+label[for="checkbox"]:hover {
+    color: #999;
+}
+
+input[type="checkbox"]#checkbox::before,
+input[type="checkbox"]#checkbox::after,
+label[for="checkbox"] {
+    transition: .4s;
+}
+
+input[type="checkbox"]#checkbox:checked + label {
+    color: lime;
+}
+
+input[type="checkbox"]#checkbox:checked + label:hover {
+    color: green;
+}
+
+
+input[type="checkbox"]#checkbox:checked:hover::before {
+    background-color: greenyellow;
+}
+
+input[type="checkbox"]#checkbox:checked::after {
+    content: '\2713';
+    background-color: green;
+
+    transform: translateX(100%) translateY(-50%);
+}
