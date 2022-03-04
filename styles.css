@@ -59,22 +59,21 @@ input[type="checkbox"]#checkbox:hover::before {
 input[type="checkbox"]#checkbox::after {
     content: '\2715';
     position: absolute;
-    top: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin-left: .05em;
-    width: 45%;
+    /* margin-left: .1em; */
+    width: 50%;
     aspect-ratio: 1 / 1;
 
-    background-color: #333;
+    background-color: red;
     color: #FFF;
     border-radius: 9999px;
 
-    font-size: .4rem;
-    transform: translateY(-50%);
+    font-size: .5rem;
+    transform: scale(.9);
 }
 
 label[for="checkbox"]:hover {
@@ -97,12 +96,12 @@ input[type="checkbox"]#checkbox:checked + label:hover {
 
 
 input[type="checkbox"]#checkbox:checked:hover::before {
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
 }
 
 input[type="checkbox"]#checkbox:checked::after {
     content: '\2713';
     background-color: green;
 
-    transform: translateX(100%) translateY(-50%);
+    transform: translateX(100%) scale(.9);
 }
